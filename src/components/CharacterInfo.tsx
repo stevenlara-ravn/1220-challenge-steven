@@ -6,7 +6,7 @@ export default function CharacterInfo({ data }: { data: Info[] }): JSX.Element {
     <ul>
       {
         data.map((infoItem: Info) => (
-          <DataCell infoType={infoItem.key} infoValue={infoItem.value} />
+          <DataCell key={infoItem.key} infoType={infoItem.key} infoValue={infoItem.value} />
         ))
       }
     </ul>

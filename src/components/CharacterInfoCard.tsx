@@ -36,17 +36,15 @@ export default function CharacterInfoCard(): JSX.Element {
 
   return (
     <section className="flex flex-col justify-center items-center bg-zinc-200 w-full h-auto overflow-hidden">
-      <main className="flex flex-col w-[900px] h-[600px] bg-white rounded-lg p-4 gap-10 shadow-md">
+      <main className="flex flex-col w-[900px] h-[600px] bg-white rounded-lg p-4 gap-10 shadow-md overflow-hidden">
         <figure>
           <img src={data?.character.image} alt="Rick" width={200} height={300} className="rounded-lg" />
         </figure>
 
-        <caption>
-          <div>
-            <SectionHeader title="General Information" />
-            <CharacterInfo data={dto} />
-          </div>
-        </caption>
+        <div>
+          <SectionHeader title="General Information" />
+          <CharacterInfo data={dto} />
+        </div>
       </main>
     </section>
   )
