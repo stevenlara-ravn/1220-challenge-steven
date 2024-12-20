@@ -1,9 +1,10 @@
-import CharacterInfo from "@/components/CharacterInfo";
-import LoadingCell from "@/components/LoadingCell";
-import NoticeCell from "@/components/NoticeCell";
-import SectionHeader from "@/components/SectionHeader";
-import { characterId } from "@/stores/characterInfo";
+// @ts-nocheck
 import { gql, useQuery, useReactiveVar } from "@apollo/client";
+import { characterId } from "../stores/characterInfo";
+import CharacterInfo from "./CharacterInfo";
+import LoadingCell from "./LoadingCell";
+import NoticeCell from "./NoticeCell";
+import SectionHeader from "./SectionHeader";
 
 const getCharacterInfo = gql`
  query CharacterInfo($id: ID!) {

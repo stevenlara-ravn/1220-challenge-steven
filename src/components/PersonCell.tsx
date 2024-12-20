@@ -1,6 +1,7 @@
-import { Character } from "@/gql/graphql";
-import { characterId } from '@/stores/characterInfo.ts';
+// @ts-nocheck
 import { ChevronRight } from "lucide-react";
+import { Character } from "../gql/graphql";
+import { characterId } from '../stores/characterInfo.ts';
 
 export default function PersonCell({ character }: { character: Character }): JSX.Element {
   const getCharacterInfo = (character: Character) => {

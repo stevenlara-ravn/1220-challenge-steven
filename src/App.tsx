@@ -1,5 +1,5 @@
-import CharactersList from "@/components/CharactersList"
 import CharacterInfoCard from "./components/CharacterInfoCard"
+import CharactersList from "./components/CharactersList"
 
 function App() {
   return (

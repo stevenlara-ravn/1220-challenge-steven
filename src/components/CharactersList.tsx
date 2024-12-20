@@ -1,9 +1,9 @@
-import LoadingCell from "@/components/LoadingCell"
-import NoticeCell from "@/components/NoticeCell"
-import PersonCell from "@/components/PersonCell"
-import { Character } from "@/gql/graphql"
 import { gql, useQuery } from "@apollo/client"
 import { useEffect, useState } from "react"
+import { Character } from "../gql/graphql"
+import LoadingCell from "./LoadingCell"
+import NoticeCell from "./NoticeCell"
+import PersonCell from "./PersonCell"
 
 
 const getCharacters = gql`
@@ -27,13 +27,8 @@ const getCharacters = gql`
 
 export default function CharactersList(): JSX.Element {
   const [characters, setCharacters] = useState<Character[]>([])
-  const [currentPage, setCurrentPage] = useState(1)
 
-  const { loading, error, data } = useQuery(getCharacters, {
-    variables: {
-      page: currentPage
-    }
-  })
+  const { loading, error, data } = useQuery(getCharacters)
 
   useEffect(() => {
     if (data?.characters.results) {

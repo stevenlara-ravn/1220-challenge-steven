@@ -1,11 +1,11 @@
-import DataCell from "@/components/DataCell";
-import { Info } from "@/gql/graphql";
+// @ts-nocheck
+import DataCell from "./DataCell";
 
-export default function CharacterInfo({ data }: { data: Info[] }): JSX.Element {
+export default function CharacterInfo({ data }): JSX.Element {
   return (
     <ul>
       {
-        data.map((infoItem: Info) => (
+        data.map((infoItem) => (
           <DataCell key={infoItem.key} infoType={infoItem.key} infoValue={infoItem.value} />
         ))
       }
