@@ -7,10 +7,14 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "codegen": "graphql-codegen --config codegen.ts",
+    "prestart": "pnpm run codegen",
+    "predev": "pnpm run codegen"
   },
   "dependencies": {
     "@apollo/client": "^3.12.4",
+    "@graphql-codegen/introspection": "^4.0.3",
     "graphql": "^16.10.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -26,6 +30,10 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.13.0",
+    "graphql-codegen-fragment-matcher": "0.18.2",
+    "graphql-codegen-typescript-client": "0.18.2",
+    "graphql-codegen-typescript-common": "0.18.2",
+    "graphql-codegen-typescript-react-apollo": "0.18.2",
     "ts-standard": "^12.0.2",
     "typescript": "~5.6.3",
     "typescript-eslint": "^8.18.1",
