@@ -1,30 +1,21 @@
-import { gql, useQuery } from "@apollo/client"
-
-const getCharacters = gql`
-  query {
-  characters {
-    results {
-      id
-      name
-      image
-      status
-    }
-  }
-  }
-`
+import CharactersList from "@/components/CharactersList"
+import CharacterInfoCard from "./components/CharacterInfoCard"
 
 function App() {
-  const { loading, error, data } = useQuery(getCharacters)
-
-  
-  if (loading) return <p>Loading...</p>
-  if (error) return <p>Error: {error.message}</p>
-
-  console.log(data);
-  
-  
   return (
-      <h1>Hello Vite!</h1>
+    <div className="flex flex-col w-full h-screen">
+      <div className="flex flex-row justify-start items-center w-full h-[59px] px-[33px] py-4 sticky top-0 z-10 bg-ravn-black">
+        <p className="text-gray-6 font-bold text-[17px]">Ravn - Rick and Morty Registry</p>
+      </div>
+
+      <div className="flex flex-row w-full h-full">
+        <aside className="flex justify-center items-center w-[350px] h-screen border-r-gray-300 border-solid border-r-[1px]">
+          <CharactersList />
+        </aside>
+
+        <CharacterInfoCard />
+      </div>
+    </div >
   )
 }
 
