@@ -1,0 +1,49 @@
+{
+  "name": "1220-challenge-steven",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "codegen": "graphql-codegen --config codegen.ts",
+    "prestart": "pnpm run codegen",
+    "predev": "pnpm run codegen"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.12.4",
+    "@graphql-codegen/introspection": "^4.0.3",
+    "@types/node": "^22.10.2",
+    "graphql": "^16.10.0",
+    "lucide-react": "^0.469.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@graphql-codegen/cli": "^5.0.3",
+    "@types/react": "^18.3.17",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "globals": "^15.13.0",
+    "graphql-codegen-fragment-matcher": "0.18.2",
+    "graphql-codegen-typescript-client": "0.18.2",
+    "graphql-codegen-typescript-common": "0.18.2",
+    "graphql-codegen-typescript-react-apollo": "0.18.2",
+    "postcss": "^8.4.49",
+    "prettier": "^3.4.2",
+    "tailwindcss": "^3.4.17",
+    "ts-standard": "^12.0.2",
+    "typescript": "~5.6.3",
+    "typescript-eslint": "^8.18.1",
+    "vite": "^6.0.3"
+  }
+}
